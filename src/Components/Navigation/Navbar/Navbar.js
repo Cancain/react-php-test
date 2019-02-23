@@ -7,8 +7,9 @@ class Navbar extends Component {
     render() {
         return (
             <div className={style.Navbar}>
+                <h1>The Fake News Journal</h1>
                 <NavItem text={'Add news'} />
-                <NavItem text={'Home'} />
+                <NavItem text={'Contact us'} />
             </div>
         )
     }

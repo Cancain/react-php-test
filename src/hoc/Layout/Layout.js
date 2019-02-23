@@ -7,7 +7,6 @@ const layout = (props) => {
     return (
         <Fragment>
             <Header />
-            <h1>The fake news journal</h1>
             <News />
         </Fragment>
     )

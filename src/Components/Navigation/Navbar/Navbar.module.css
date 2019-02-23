@@ -1,5 +1,20 @@
+@keyframes sizeUp{
+    to {font-size: 2.2rem; font-weight: bolder;}
+}
+
 .Navbar {
     display: flex;
     flex-direction: row;
     justify-content: center;
+}
+
+.Navbar h1 {
+    margin: auto 0;
+    cursor: pointer;
+}
+
+.Navbar h1:hover{
+    animation-name: sizeUp;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
 }

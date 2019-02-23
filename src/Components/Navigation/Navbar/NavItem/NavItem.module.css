@@ -1,4 +1,15 @@
+@keyframes sizeUp{
+    to {font-size: 1.2rem; font-weight: bolder;}
+}
+
 .NavItem {    
     margin-left: 10px;
     cursor: pointer;
 }
+
+.NavItem:hover{
+    animation-name: sizeUp;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+    
