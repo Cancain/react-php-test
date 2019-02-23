@@ -1,6 +1,8 @@
 import React, { Fragment, Component } from 'react';
 import axios from 'axios';
 
+import Post from '../News/Post/Post';
+
 class News extends Component {
 
     state = {
@@ -12,7 +14,6 @@ class News extends Component {
             .then(response => {
                 const newPosts = response.data;
                 this.setState({ posts: newPosts });
-                console.log(newPosts);
             })
     }
 
@@ -20,10 +21,12 @@ class News extends Component {
 
         const news = this.state.posts.map(post => {
             return (
-                <div>
-                    <h1>{post.headLine}</h1>
-                    <p>{post.body}</p>
-                </div>
+                <Post
+                    key={post.id}
+                    headLine={post.headLine}
+                    date={post.createdAt}
+                    body={post.body}
+                />
             )
         })
 

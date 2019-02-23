@@ -1,0 +1,7 @@
+.Post {
+    width: 50vw;
+    margin: 1rem auto;
+    border: 1px solid black;
+    box-shadow: 2.5px 5px;
+    border-radius: 15px;
+}
