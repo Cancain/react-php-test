@@ -3,26 +3,33 @@ import axios from 'axios';
 
 class News extends Component {
 
+    state = {
+        posts: []
+    }
+
     componentDidMount() {
         axios.get('/posts/news/')
             .then(response => {
-                console.log(response);
+                const newPosts = response.data;
+                this.setState({ posts: newPosts });
+                console.log(newPosts);
             })
     }
 
     render() {
+
+        const news = this.state.posts.map(post => {
+            return (
+                <div>
+                    <h1>{post.headLine}</h1>
+                    <p>{post.body}</p>
+                </div>
+            )
+        })
+
         return (
             <Fragment>
-                <div>
-                    <h2>Headline</h2>
-                    <small>Date published</small>
-                    <p>body</p>
-                </div>
-                <div>
-                    <h2>Headline</h2>
-                    <small>Date published</small>
-                    <p>body</p>
-                </div>
+                {news}
             </Fragment>
         )
     }
