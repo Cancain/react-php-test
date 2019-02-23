@@ -6,9 +6,6 @@
  *URL FORMAT - /controller/method/params
  */
 
-header("Access-Control-Allow-Origin: *");
-
-$init = new Core();
 class Core{
     
     protected $currentController = 'Posts';
