@@ -1,21 +1,28 @@
 <?php
+
 /*
  *App Core Class
  *Creates URL & loads core controller
  *URL FORMAT - /controller/method/params
  */
+
+header("Access-Control-Allow-Origin: *");
+
+$init = new Core();
 class Core{
-    protected $currentController = 'Pages';
-    protected $currentMethod = 'index';
+    
+    protected $currentController = 'Posts';
+    protected $currentMethod = 'news';
     protected $params = [];
 
     public function __construct(){
         // print_r($this->getUrl());
+        header("Access-Control-Allow-Origin: *");
 
-        $url = $this->getUrl();
+        $url = $this->getUrl(); 
 
         //look in controllers for first value
-        if (file_exists('../app/controllers/'. ucwords($url[0]) . '.php')){
+        if (file_exists('../Controllers/'. ucwords($url[0]) . '.php')){
             //if exists, set as controller
             $this->currentController = ucwords($url[0]);
             //unser 0 index
@@ -23,7 +30,7 @@ class Core{
         }
 
         //require the controller
-        require_once '../app/controllers/' . $this->currentController . '.php';
+        require_once '../Controllers/' . $this->currentController . '.php';
 
         //instantiate controller class
         $this->currentController = new $this->currentController;
@@ -48,6 +55,22 @@ class Core{
     }
 
     public function getUrl(){
+        $originalUrl = $_SERVER['REQUEST_URI'];
+        $url = rtrim($originalUrl, '/');
+        $url = filter_var($url, FILTER_SANITIZE_URL);
+        $url = explode('/', $url);
+        $url = array_slice($url, -3);
+
+        if($url[0] === 'Core.php'){
+            $url[0] = $url[1];
+            $url[1] = $url[2]; 
+        }
+
+        return $url;
+
+    }
+
+    public function getUrlold(){
         if(isset($_GET['url'])){
             $url = rtrim($_GET['url'], '/');
             $url = filter_var($url, FILTER_SANITIZE_URL);
