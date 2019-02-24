@@ -1,8 +1,30 @@
+@keyframes popOut{
+    to{ left: 17.5%;}
+}
+
 .Modal {
-    position: relative;
-    width: 400px;
-    height: 500px;
-    background: rgba(255, 255, 255, 0.5);
-    z-index: 2;
-    margin: auto;
+    overflow: auto;
+    width: 60%;
+    height: fit-content;
+    position: fixed;
+    background: rgba(255, 255, 255, 0.75);
+    color: #001a1a;
+    z-index: 3;
+    left: -5%;
+    font-size: 1.5rem;
+    padding: 2rem;
+    margin: 2rem 0 0 0;
+    border-radius: 7px;
+    animation-name: popOut;
+    animation-duration: 0.3s;
+    animation-fill-mode: forwards;
+}
+
+.Modal i{
+    position: absolute;
+    color: #001a1a;
+    top: 2%;
+    right: 1%;
+    cursor: pointer;
+
 }

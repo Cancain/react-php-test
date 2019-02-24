@@ -15,6 +15,13 @@ class Posts extends Controller {
         echo $data;
 
     }
+
+    public function showPost ($id) {
+        $data = $this->postModel->getNewsById($id);
+
+        $data = json_encode($data);
+        echo $data;
+    }
 }
 
 ?>

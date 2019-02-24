@@ -23,9 +23,11 @@ class News extends Component {
             return (
                 <Post
                     key={post.id}
+                    id={post.id}
                     headLine={post.headLine}
                     date={post.createdAt}
                     body={post.body}
+                    clicked={() => this.props.newsClicked(post.id)}
                 />
             )
         })

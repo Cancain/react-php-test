@@ -15,6 +15,17 @@ class Post{
         return $data;
 
     }
+
+    public function getNewsById($id) {
+        $this->db->query('SELECT * FROM news
+                            WHERE id = :id');
+        
+        $this->db->bind('id', $id);
+
+        $data = $this->db->fetchSingle();
+
+        return $data;
+    }
 }
 
 ?>
