@@ -1,0 +1,31 @@
+.AddNews div{
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    margin: 0 0 1rem 0;
+}
+
+.AddNews div label,
+.AddNews div input,
+.AddNews div textarea{
+    width: 80%;
+    border-radius: 7px;
+    border: 0;
+    padding: 0.5rem;
+    font-size: 1.5rem;
+}
+
+.AddNews div textarea {
+    height: 250px;
+}
+
+.AddNews div input {
+    text-align: center;
+}
+
+.btn {
+    border-radius: 7px;
+    border: 0;
+    padding: 0.5rem;
+    cursor: pointer;
+}

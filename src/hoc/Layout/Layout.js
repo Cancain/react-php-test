@@ -5,6 +5,7 @@ import News from '../../Components/News/News';
 import Header from '../../Containters/Header/Header';
 import Modal from '../../Containters/Modal/Modal';
 import FullPost from '../../Components/News/FullPost/FullPost';
+import AddNews from '../../Components/News/AddNews/AddNews';
 
 class Layout extends Component {
 
@@ -25,8 +26,6 @@ class Layout extends Component {
             .catch(error => {
                 console.log(error);
             })
-        console.log(this.state.currentPost.id);
-
     }
 
     homeHandler = () => {
@@ -56,7 +55,9 @@ class Layout extends Component {
             closeClicked={this.homeHandler}
             backdropClicked={this.homeHandler}
         >
-            <p>Add news</p>
+            <AddNews
+                cancelButtonClick={this.homeHandler}
+            />
         </Modal>;
 
         const contact = <Modal

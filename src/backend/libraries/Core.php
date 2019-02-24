@@ -8,13 +8,11 @@
 
 class Core{
     
-    protected $currentController = 'Posts';
-    protected $currentMethod = 'news';
+    protected $currentController = null;
+    protected $currentMethod = null;
     protected $params = [];
 
     public function __construct(){
-        // print_r($this->getUrl());
-        header("Access-Control-Allow-Origin: *");
 
         $url = $this->getUrl(); 
 
@@ -60,20 +58,12 @@ class Core{
 
         if($url[0] === 'Core.php'){
             $url[0] = $url[1];
-            $url[1] = $url[2]; 
+            $url[1] = $url[2];
+            unset($url[3]); 
         }
 
         return $url;
 
-    }
-
-    public function getUrlold(){
-        if(isset($_GET['url'])){
-            $url = rtrim($_GET['url'], '/');
-            $url = filter_var($url, FILTER_SANITIZE_URL);
-            $url = explode('/', $url);
-            return $url;
-        }
     }
     
 }

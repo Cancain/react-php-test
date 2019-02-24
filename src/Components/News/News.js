@@ -10,10 +10,11 @@ class News extends Component {
     }
 
     componentDidMount() {
-        axios.get('/posts/news/')
+        axios.get('/Posts/news/-1')
             .then(response => {
                 const newPosts = response.data;
                 this.setState({ posts: newPosts });
+                console.log(newPosts);
             })
     }
 

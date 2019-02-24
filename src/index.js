@@ -7,6 +7,7 @@ import axios from 'axios';
 
 axios.defaults.baseURL = 'http://localhost/react-php-test/src/backend/libraries/bootstrap.php';
 
+
 ReactDOM.render(<App />, document.getElementById('root'));
 
 // If you want your app to work offline and load faster, you can change
