@@ -37,6 +37,11 @@ class Layout extends Component {
         this.setState({ showModal: 'addNews' })
     }
 
+
+    contactClickedHandler = () => {
+        this.setState({ showModal: 'contact' })
+    }
+
     newsClickedHandler = (id) => {
         this.setState({
             showModal: 'showNews',
@@ -44,11 +49,22 @@ class Layout extends Component {
         })
     }
 
+
     render() {
 
         const addNews = <Modal
             closeClicked={this.homeHandler}
-            backdropClicked={this.homeHandler} />;
+            backdropClicked={this.homeHandler}
+        >
+            <p>Add news</p>
+        </Modal>;
+
+        const contact = <Modal
+            closeClicked={this.homeHandler}
+            backdropClicked={this.homeHandler}
+        >
+            <p>Contact</p>
+        </Modal>;
 
         let showNews = null;
 
@@ -73,6 +89,9 @@ class Layout extends Component {
                 showNewsHandler(this.state.newsId);
                 modalHandler = showNews;
                 break;
+            case 'contact':
+                modalHandler = contact;
+                break;
             default:
                 modalHandler = null;
         }
@@ -80,6 +99,7 @@ class Layout extends Component {
         return (
             <Fragment>
                 <Header
+                    contactClicked={this.contactClickedHandler}
                     addNewsClicked={this.addNewsClickedHandler}
                     logoClicked={this.homeHandler}
                 />

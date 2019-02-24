@@ -7,7 +7,11 @@ const header = (props) => {
 
     return (
         <div className={style.Header}>
-            <Navbar logoClicked={props.logoClicked} addNewsClicked={props.addNewsClicked} />
+            <Navbar
+                logoClicked={props.logoClicked}
+                addNewsClicked={props.addNewsClicked}
+                contactClicked={props.contactClicked}
+            />
         </div>
     )
 }

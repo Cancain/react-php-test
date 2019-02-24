@@ -4,11 +4,13 @@ import style from './NavItem.module.css';
 
 const navItem = (props) => {
     return (
-        <p onClick={props.clicked}
-            className={style.NavItem}
-        >
-            {props.text}
-        </p>
+        <div onClick={props.clicked}>
+            <p
+                className={style.NavItem}
+            >
+                {props.text}
+            </p>
+        </div>
     )
 }
 
