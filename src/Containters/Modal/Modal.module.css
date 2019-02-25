@@ -7,8 +7,8 @@
     width: 60%;
     height: fit-content;
     position: fixed;
-    background: rgba(255, 255, 255, 0.75);
-    color: #001a1a;
+    background: #001a1a;
+    color: #477070;
     z-index: 3;
     left: -5%;
     font-size: 1.5rem;
@@ -22,7 +22,7 @@
 
 .Modal i{
     position: absolute;
-    color: #001a1a;
+    color: #477070;
     top: 2%;
     right: 1%;
     cursor: pointer;

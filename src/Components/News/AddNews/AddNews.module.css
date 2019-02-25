@@ -13,14 +13,18 @@
     border: 0;
     padding: 0.5rem;
     font-size: 1.5rem;
+    color: #477070;
 }
 
 .AddNews div textarea {
     height: 250px;
+    background: rgba(0, 0, 0, 0.5)
 }
 
 .AddNews div input {
     text-align: center;
+    background: rgba(0, 0, 0, 0.5)
+    
 }
 
 .btn {
@@ -28,4 +32,5 @@
     border: 0;
     padding: 0.5rem;
     cursor: pointer;
+    background: #477070;
 }
