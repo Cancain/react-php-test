@@ -17,4 +17,10 @@
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
 }
+
+@media (max-width: 450px) {
+    .NavItem{
+        font-size: 1.5rem;
+    }
+}
     

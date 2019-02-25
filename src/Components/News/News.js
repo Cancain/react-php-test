@@ -1,7 +1,8 @@
-import React, { Fragment, Component } from 'react';
+import React, { Component } from 'react';
 import axios from 'axios';
 
 import Post from '../News/Post/Post';
+import style from './News.module.css';
 
 class News extends Component {
 
@@ -33,7 +34,7 @@ class News extends Component {
         })
 
         return (
-            <div style={{ marginTop: '4rem' }}>
+            <div className={style.News}>
                 {news}
             </div>
         )

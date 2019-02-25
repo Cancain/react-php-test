@@ -10,8 +10,11 @@ const modal = (props) => {
             <Backdrop clicked={props.backdropClicked} />
 
             <div className={style.Modal} >
-                <i onClick={props.closeClicked} className="fas fa-window-close"></i>
-                {props.children}
+                <div>
+                    <i onClick={props.closeClicked} className="fas fa-window-close"></i>
+                    {props.children}
+                </div>
+
             </div>
         </Fragment>
     )

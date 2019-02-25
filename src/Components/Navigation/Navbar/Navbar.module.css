@@ -18,3 +18,13 @@
     animation-duration: 0.3s;
     animation-fill-mode: forwards;
 }
+
+@media (max-width: 450px){
+    .Navbar{
+        flex-direction: column;
+    }
+
+    .Navbar h1 {
+        font-size: 2rem;
+    }
+}

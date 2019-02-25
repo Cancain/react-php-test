@@ -1,0 +1,15 @@
+.News {
+    margin-top: 4rem;
+}
+
+@media (max-width: 450px){
+    .News {
+        margin-top: 7rem;
+    }
+}
+
+@media (max-width: 350px){
+    .News {
+        margin-top: 9rem;
+    }
+}

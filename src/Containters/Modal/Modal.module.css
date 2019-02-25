@@ -11,6 +11,7 @@
     background: #001a1a;
     color: #477070;
     z-index: 3;
+    top: 5%;
     left: -5%;
     font-size: 1.5rem;
     padding: 2rem;
@@ -24,8 +25,34 @@
 .Modal i{
     position: absolute;
     color: #477070;
-    top: 5px;
-    right: 10px;
+    top: 10px;
+    right: 20px;
     cursor: pointer;
+    z-index: 4;
+    display: block;
+}
 
+@media (max-width: 450px){
+    .Modal{
+        top: 10%;
+        position: absolute;
+        width: 75%;
+        left: -300px;
+    }
+
+    @keyframes popOut{
+        to{ left: 5%;}
+    }
+}
+
+@media (max-width: 350px){
+    .Modal{
+        position: absolute;
+        width: 75%;
+        left: -300px;
+    }
+
+    @keyframes popOut{
+        to{ left: 2.5%;}
+    }
 }

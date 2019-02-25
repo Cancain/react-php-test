@@ -5,3 +5,14 @@
     position: fixed;
     top: 0;
 }
+
+@media (max-width: 450px){
+    .Header{
+        height: 100px;
+    }    
+}
+@media (max-width: 350px){
+    .Header{
+        height: 130px;
+    }    
+}
