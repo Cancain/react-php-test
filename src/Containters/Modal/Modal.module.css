@@ -34,8 +34,7 @@
 
 @media (max-width: 450px){
     .Modal{
-        top: 10%;
-        position: absolute;
+        top: 0;
         width: 75%;
         left: -300px;
     }
@@ -47,7 +46,7 @@
 
 @media (max-width: 350px){
     .Modal{
-        position: absolute;
+        position: fixed;
         width: 75%;
         left: -300px;
     }
