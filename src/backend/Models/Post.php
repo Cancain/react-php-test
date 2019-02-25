@@ -8,7 +8,8 @@ class Post{
     }
 
     public function getAllNews() {
-        $this->db->query('SELECT * FROM news');
+        $this->db->query('SELECT * FROM news
+                            ORDER BY createdAt desc');
 
         $data = $this->db->fetchMultiple();
 
@@ -25,6 +26,17 @@ class Post{
         $data = $this->db->fetchSingle();
 
         return $data;
+    }
+
+    public function addNews($data){
+        $this->db->query('INSERT INTO news(headLine, body)
+                            VALUES(:headLine, :body)');
+
+        $this->db->bind('headLine', $data['title']);
+        $this->db->bind('body', $data['body']);
+
+        $this->db->execute();
+
     }
 }
 

@@ -48,6 +48,10 @@ class Layout extends Component {
         })
     }
 
+    closeWindowHandler = (value) => {
+        console.log(value);
+    }
+
 
     render() {
 
@@ -57,6 +61,7 @@ class Layout extends Component {
         >
             <AddNews
                 cancelButtonClick={this.homeHandler}
+                closeWindow={this.homeHandler}
             />
         </Modal>;
 

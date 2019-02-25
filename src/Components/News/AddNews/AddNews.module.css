@@ -33,4 +33,15 @@
     padding: 0.5rem;
     cursor: pointer;
     background: #477070;
+    font-size: 1.2rem;
+}
+
+@keyframes popOut{
+    to{background-color: #6fb6b6;}
+}
+
+.btn:hover {
+    animation-name: popOut;
+    animation-duration: 0.5s;
+    animation-fill-mode: forwards;
 }

@@ -14,7 +14,6 @@ class News extends Component {
             .then(response => {
                 const newPosts = response.data;
                 this.setState({ posts: newPosts });
-                console.log(newPosts);
             })
     }
 
@@ -34,9 +33,9 @@ class News extends Component {
         })
 
         return (
-            <Fragment>
+            <div style={{ marginTop: '4rem' }}>
                 {news}
-            </Fragment>
+            </div>
         )
     }
 }

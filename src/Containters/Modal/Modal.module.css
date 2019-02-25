@@ -6,6 +6,7 @@
     overflow: auto;
     width: 60%;
     height: fit-content;
+    max-height: 80%;
     position: fixed;
     background: #001a1a;
     color: #477070;
@@ -23,8 +24,8 @@
 .Modal i{
     position: absolute;
     color: #477070;
-    top: 2%;
-    right: 1%;
+    top: 5px;
+    right: 10px;
     cursor: pointer;
 
 }

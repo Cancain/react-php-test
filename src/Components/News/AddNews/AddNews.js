@@ -14,14 +14,13 @@ class AddNews extends Component {
         let data = {
             title: this.state.title,
             body: this.state.body
-        }
+        };
 
-        const json = JSON.stringify(data)
+        const json = JSON.stringify(data);
         axios.post('/posts/addPost/-1', json)
             .then(response => {
-                console.log(response)
+                this.props.closeWindow();
             })
-
     }
 
     render() {
@@ -50,13 +49,15 @@ class AddNews extends Component {
                 >
                     Submit
                 </button>
-                <button onClick={this.props.cancelButtonClick}
+                <button
+                    onClick={this.props.cancelButtonClick}
                     style={{ marginLeft: '0.5rem' }}
                     className={style.btn}
                 >
                     Cancel
                 </button>
-            </div>
+
+            </div >
         )
     }
 }
